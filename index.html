@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Benjamín Varela, estudiante de Ingeniería Civil en Informática.">
+    <title>Portafolio - Benjamín Varela</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- role="banner" indica que es el encabezado principal -->
+    <header role="banner">
+        <nav aria-label="Navegación principal">
+            <!-- El logo ahora es un enlace funcional en lugar de un div -->
+            <a href="#sobre-mi" class="logo" aria-label="Ir al inicio del portafolio">Mi Portafolio</a>
+            
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#sobre-mi" role="menuitem">Sobre mí</a></li>
+                <li role="none"><a href="#proyectos" role="menuitem">Proyectos</a></li>
+                <li role="none"><a href="#contacto" role="menuitem">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- La etiqueta main envuelve el contenido principal de la página -->
+    <main role="main">
+        
+        <!-- aria-labelledby conecta la sección con su título para accesibilidad -->
+        <section id="sobre-mi" class="hero" aria-labelledby="hero-title">
+            <img src="img/2_2.jpg" alt="Retrato..." class="profile-pic">
+            <h1 id="hero-title">¡Hola! Soy Benjamín Varela</h1>
+            <p>Estudiante de Ingeniería Civil en Informática. Me gusta desarrollar software, crear APIs y explorar nuevas tecnologías para resolver problemas.</p>
+        </section>
+
+        <section id="proyectos" class="projects-section" aria-labelledby="projects-title">
+            <h2 id="projects-title">Mis Proyectos</h2>
+            
+            <!-- Una lista es la forma más semántica de agrupar elementos similares -->
+            <!-- role="list" previene un bug donde algunos lectores de pantalla ignoran las listas sin viñetas -->
+            <ul class="projects-grid" role="list" aria-label="Lista de mis proyectos destacados">
+                
+                <!-- Cada proyecto es un "artículo" independiente -->
+                <li role="listitem">
+                    <article class="project-card" aria-labelledby="proj1-title">
+                        <h3 id="proj1-title">API REST con FastAPI</h3>
+                        <p>Desarrollo y validación de endpoints utilizando FastAPI y Pydantic en Python.</p>
+                        <!-- aria-label ayuda a que quien no ve la pantalla sepa exactamente a DÓNDE lleva el botón -->
+                        <a href="https://github.com/BenjaVarela/backend-2026-grupo-3" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio del proyecto API REST en GitHub">Ir al Proyecto</a>
+                    </article>
+                </li>
+
+                <li role="listitem">
+                    <article class="project-card" aria-labelledby="proj2-title">
+                        <h3 id="proj2-title">Calculadora de Límites</h3>
+                        <p>Aplicación de escritorio interactiva construida con CustomTkinter, SymPy y Matplotlib.</p>
+                        <a href="https://github.com/BenjaVarela/Evaluacion_Integrada_1_-EID-" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio de la Calculadora de Límites en GitHub">Ir al Proyecto</a>
+                    </article>
+                </li>
+
+                <li role="listitem">
+                    <article class="project-card" aria-labelledby="proj3-title">
+                        <h3 id="proj3-title">Primera página web</h3>
+                        <p>Página web basica con solamente index.html y style.css, donde comence mi viaje.</p>
+                        <a href="https://github.com/BenjaVarela/my_web" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio de la Red Local Huemul Gráfico en GitHub">Ir al Proyecto</a>
+                    </article>
+                </li>
+
+            </ul>
+        </section>
+
+        <section id="contacto" class="contact-section" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contáctame</h2>
+            <form action="#" method="POST" class="contact-form" aria-label="Formulario para enviar un mensaje">
+                
+                <!-- Las etiquetas <label> conectadas por el 'for' al 'id' del input son obligatorias para WAI-ARIA -->
+                <label for="nombre" class="visually-hidden">Tu Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required aria-required="true">
+                
+                <label for="correo" class="visually-hidden">Tu Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Tu Correo Electrónico" required aria-required="true">
+                
+                <label for="mensaje" class="visually-hidden">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué te puedo ayudar?" required aria-required="true"></textarea>
+                
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- role="contentinfo" es el estándar ARIA para el pie de página -->
+    <footer role="contentinfo">
+        <!-- El uso de <time> es semántico para fechas -->
+        <p>&copy; <time datetime="2026">2026</time> Benjamín Varela. Hecho con Pc y Café.</p>
+    </footer>
+</body>
+</html>
