@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- role="banner" indica que es el encabezado principal -->
     <header role="banner">
         <nav aria-label="Navegación principal">
-            <!-- El logo ahora es un enlace funcional en lugar de un div -->
             <a href="#sobre-mi" class="logo" aria-label="Ir al inicio del portafolio">Mi Portafolio</a>
-            
             <ul class="nav-links" role="menubar">
                 <li role="none"><a href="#sobre-mi" role="menuitem">Sobre mí</a></li>
                 <li role="none"><a href="#proyectos" role="menuitem">Proyectos</a></li>
@@ -22,10 +19,8 @@
         </nav>
     </header>
 
-    <!-- La etiqueta main envuelve el contenido principal de la página -->
     <main role="main">
         
-        <!-- aria-labelledby conecta la sección con su título para accesibilidad -->
         <section id="sobre-mi" class="hero" aria-labelledby="hero-title">
             <img src="img/2_2.jpg" alt="Retrato..." class="profile-pic">
             <h1 id="hero-title">¡Hola! Soy Benjamín Varela</h1>
@@ -34,17 +29,13 @@
 
         <section id="proyectos" class="projects-section" aria-labelledby="projects-title">
             <h2 id="projects-title">Mis Proyectos</h2>
-            
-            <!-- Una lista es la forma más semántica de agrupar elementos similares -->
-            <!-- role="list" previene un bug donde algunos lectores de pantalla ignoran las listas sin viñetas -->
+
             <ul class="projects-grid" role="list" aria-label="Lista de mis proyectos destacados">
                 
-                <!-- Cada proyecto es un "artículo" independiente -->
                 <li role="listitem">
                     <article class="project-card" aria-labelledby="proj1-title">
                         <h3 id="proj1-title">API REST con FastAPI</h3>
                         <p>Desarrollo y validación de endpoints utilizando FastAPI y Pydantic en Python.</p>
-                        <!-- aria-label ayuda a que quien no ve la pantalla sepa exactamente a DÓNDE lleva el botón -->
                         <a href="https://github.com/BenjaVarela/backend-2026-grupo-3" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio del proyecto API REST en GitHub">Ir al Proyecto</a>
                     </article>
                 </li>
@@ -72,7 +63,6 @@
             <h2 id="contact-title">Contáctame</h2>
             <form action="#" method="POST" class="contact-form" aria-label="Formulario para enviar un mensaje">
                 
-                <!-- Las etiquetas <label> conectadas por el 'for' al 'id' del input son obligatorias para WAI-ARIA -->
                 <label for="nombre" class="visually-hidden">Tu Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required aria-required="true">
                 
@@ -88,9 +78,7 @@
 
     </main>
 
-    <!-- role="contentinfo" es el estándar ARIA para el pie de página -->
     <footer role="contentinfo">
-        <!-- El uso de <time> es semántico para fechas -->
         <p>&copy; <time datetime="2026">2026</time> Benjamín Varela. Hecho con Pc y Café.</p>
     </footer>
 </body>
