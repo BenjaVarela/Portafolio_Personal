@@ -5,7 +5,7 @@ Este sitio web es un prototipo/mockup de mi portafolio profesional, desarrollado
 
 ## Demo en Vivo
 Puedes ver la versión desplegada y funcional del portafolio en el siguiente enlace:
-👉 **[Ver Portafolio Web](https://tu-proyecto.onrender.com)** *(Reemplaza este enlace con tu URL real de Render)*
+**[Ver Portafolio Web](https://portafolio-benjaminvarela.onrender.com/)**
 
 ## Tecnologías Utilizadas
 * **HTML5:** Estructura 100% semántica y accesible (reemplazo de divs por landmarks `main`, `header`, `nav`, `section`, `footer`).
